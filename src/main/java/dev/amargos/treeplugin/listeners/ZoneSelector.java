@@ -3,6 +3,7 @@ package dev.amargos.treeplugin.listeners;
 import dev.amargos.treeplugin.Main;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -45,6 +46,26 @@ public class ZoneSelector implements Listener {
         );
         player.sendMessage(message);
       }
+
+      if (firstPositions.containsKey(player.getUniqueId())) {
+        Location pos1 = firstPositions.get(player.getUniqueId());
+        Location pos2 = clickedBlock;
+
+        FileConfiguration config = plugin.getConfig();
+        String zoneName = "Zone" + (config.getConfigurationSection("zones") == null ? 1 : config.getConfigurationSection("zones").getKeys(false).size() + 1);
+
+        config.set("zones." + zoneName + ".pos1.x", pos1.getBlockX());
+        config.set("zones." + zoneName + ".pos1.y", pos1.getBlockY());
+        config.set("zones." + zoneName + ".pos1.z", pos1.getBlockZ());
+
+        config.set("zones." + zoneName + ".pos2.x", pos1.getBlockX());
+        config.set("zones." + zoneName + ".pos2.y", pos1.getBlockY());
+        config.set("zones." + zoneName + ".pos2.z", pos1.getBlockZ());
+
+        plugin.saveConfig();;
+        player.sendMessage("Zone guardada como " + zoneName);
+      }
+
     }
   }
 }
