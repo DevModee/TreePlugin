@@ -1,0 +1,4 @@
+name: TreePlugin
+version: 1.0
+main: dev.amargos.treeplugin.Main
+api-version: 1.8
