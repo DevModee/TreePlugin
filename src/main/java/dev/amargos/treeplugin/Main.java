@@ -1,6 +1,7 @@
 package dev.amargos.treeplugin;
 
 import dev.amargos.treeplugin.listeners.TreeListener;
+import dev.amargos.treeplugin.tasks.TreeRespawnTask;
 import dev.amargos.treeplugin.utils.MessageManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -19,6 +20,8 @@ public class Main extends JavaPlugin {
         registerListeners();
 
         messageManager = new MessageManager(this);
+
+        new TreeRespawnTask(this).runTaskTimer(this, 0L, 6000L); // 6000L = 5 Minutos
     }
 
     @Override
