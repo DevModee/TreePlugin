@@ -1,0 +1,4 @@
+messages:
+  zone-selector:
+    first-point-set: "Primer punto establecido en: %location%"
+    second-point-set: "Segundo punto establecido en: %location%"
