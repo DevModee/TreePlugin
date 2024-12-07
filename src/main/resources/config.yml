@@ -1,11 +1,13 @@
 zones:
   - name: "Zona1"
+    world: "world"  # Añadido para especificar el mundo
     pos1: {x: 100, y: 65, z: 200}
     pos2: {x: 110, y: 70, z: 210}
     spawn_blocks:
       - {x: 105, y: 66, z: 205}
       - {x: 108, y: 66, z: 207}
   - name: "Zona2"
+    world: "world_nether"  # Otro ejemplo de mundo
     pos1: {x: 50, y: 65, z: 80}
     pos2: {x: 60, y: 70, z: 90}
     spawn_blocks:
