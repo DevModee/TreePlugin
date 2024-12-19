@@ -1,0 +1,28 @@
+gui:
+  menu_title: '&8Estadísticas del Jugador'
+  size: 27
+  items:
+    player_name:
+      material: 'NAME_TAG'
+      slot: 10
+      display_name: '&6Nombre: &e{player_name}'
+      lore:
+        - '&7Esta es tu información de usuario.'
+    trees_chopped:
+      material: 'OAK_LOG'
+      slot: 12
+      display_name: '&6Árboles Talados: &e{trees_chopped}'
+      lore:
+        - '&7Cantidad total de árboles talados.'
+    coins:
+      material: 'GOLD_NUGGET'
+      slot: 14
+      display_name: '&6Monedas: &e{coins}'
+      lore:
+        - '&7Tu balance de monedas virtuales.'
+    level:
+      material: 'EXPERIENCE_BOTTLE'
+      slot: 16
+      display_name: '&6Nivel: &e{level}'
+      lore:
+        - '&7Tu nivel como talador experto.'

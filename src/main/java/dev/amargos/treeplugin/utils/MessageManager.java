@@ -14,6 +14,17 @@ public class MessageManager {
   public MessageManager(JavaPlugin plugin) {
     this.plugin = plugin;
     loadMessages();
+    reloadMessages();
+  }
+
+  public void reloadMessages() {
+    if (messagesFile == null) {
+        messagesFile = new File(plugin.getDataFolder(), "messages.yml");
+    }
+    if (!messagesFile.exists()) {
+      plugin.saveResource("messages.yml", false);
+    }
+    messagesConfig = YamlConfiguration.loadConfiguration(messagesFile);
   }
 
   private void loadMessages() {
@@ -31,9 +42,5 @@ public class MessageManager {
   public String getMessage(String path, String placeholder, String value) {
     String message = getMessage(path);
     return message.replace(placeholder, value);
-  }
-
-  public void reloadMessages() {
-    messagesConfig = YamlConfiguration.loadConfiguration(messagesFile);
   }
 }

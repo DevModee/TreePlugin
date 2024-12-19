@@ -2,3 +2,13 @@ name: TreePlugin
 version: 1.6
 main: dev.amargos.treeplugin.Main
 api-version: 1.8
+commands:
+  reload:
+    description: Reloads the plugin configuration.
+    usage: /reload
+  stats:
+    description: Shows the player's statistics.
+    usage: /stats
+  wand:
+    description: Gives the player the claiming wand.
+    usage: /wand
