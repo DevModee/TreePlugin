@@ -1,0 +1,11 @@
+messages:
+  zone-selector:
+    first-point-set: "Primer punto establecido en: %location%"
+    second-point-set: "Segundo punto establecido en: %location%"
+
+no_permission: "&cNo tienes permiso para usar este comando."
+plugin_reloaded: "&aEl plugin se ha recargado correctamente."
+only_players: "&cSolo los jugadores pueden usar este comando."
+wand_name: "&6Claim Wand"
+wand_given: "&aHas recibido la herramienta de claimeo."
+stats: "&aEstadísticas:\n&7Nivel: &e{level}\n&7Árboles talados: &e{trees_chopped}\n&7Monedas: &e{coins}"
